@@ -8,7 +8,7 @@ async function connectDatabase() {
       port: process.env.DB_PORT || 3306,
       user: process.env.DB_USER || "superBrain",
       password: process.env.DB_PASSWORD || "superBrain123",
-      database: "gym_pos_system",
+      database: process.env.DB_NAME || "gym_pos_system",
     };
 
     const con = await mysql.createConnection(connectionConfig);
